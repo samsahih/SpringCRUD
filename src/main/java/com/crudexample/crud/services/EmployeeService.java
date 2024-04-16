@@ -7,10 +7,7 @@ import com.crudexample.crud.mappers.IEmployeeMapper;
 import com.crudexample.crud.repositories.IEmployeeRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class EmployeeService {
