@@ -12,6 +12,8 @@ public class Employee {
 
     private String employeeName;
 
+    private String employeeEmail;
+
     private String employeeContactNumber;
 
     private String employeeAddress;
@@ -31,16 +33,20 @@ public class Employee {
         return employeeId;
     }
 
-    public void setEmployeeId(Integer employeeId) {
-        this.employeeId = employeeId;
-    }
-
     public String getEmployeeName() {
         return employeeName;
     }
 
     public void setEmployeeName(String employeeName) {
         this.employeeName = employeeName;
+    }
+
+    public String getEmployeeEmail() {
+        return employeeEmail;
+    }
+
+    public void setEmployeeEmail(String employeeEmail) {
+        this.employeeEmail = employeeEmail;
     }
 
     public String getEmployeeContactNumber() {
