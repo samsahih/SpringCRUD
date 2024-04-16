@@ -13,7 +13,7 @@ public class EmployeeDto {
 
     @NotNull(message = "Email is mandatory")
     @NotEmpty(message = "Email can not be empty")
-    @Email
+    @Email(message = "Incorrect email format")
     public String employeeEmail;
 
     @NotNull(message = "Phone is mandatory")

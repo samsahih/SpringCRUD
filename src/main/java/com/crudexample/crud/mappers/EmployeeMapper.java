@@ -5,12 +5,22 @@ import com.crudexample.crud.dtos.UpdateEmployeeDto;
 import com.crudexample.crud.entities.Employee;
 import org.springframework.stereotype.Component;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.validation.Validator;
+
 @Component
 public class EmployeeMapper implements IEmployeeMapper {
 
+    private final Validator validator;
+
+    @Autowired
+    public EmployeeMapper(Validator validator) {
+        this.validator = validator;
+    }
+
     @Override
     public Employee toEntity(EmployeeDto dto) {
-        if (dto == null) {
+        if (dto == null || !validator.validate(dto).isEmpty()) {
             return null;
         }
 
